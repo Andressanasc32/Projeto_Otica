@@ -1,113 +1,129 @@
-🕶️ Sistema de Gestão para Ótica
-Um sistema web completo para gerenciamento e controle de produtos, estoque e rotas de vendas para óticas, desenvolvido com Python (Flask) no backend e integração com banco de dados SQLite.
+<div align="center">
 
-📌 Sobre o Projeto
-Este projeto consiste em uma API REST e painel para gerenciamento de catálogo de produtos (óculos, lentes e acessórios) e controle das rotas da aplicação.
+# 🕶️ Sistema de Gestão para Ótica
 
-🛠️ Tecnologias Utilizadas
-Backend: Python 3.10+, Flask, Flask-CORS
+### *API RESTful & Painel Web de Controle de Estoque e Produtos*
 
-Frontend: HTML5, CSS3, Bootstrap 5
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-2.x-black?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![License](https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen?style=for-the-badge)](#)
 
-Banco de Dados: SQLite
+</div>
 
-Ambiente Virtual e Versão: venv, Git
+<br />
 
-Auxílio no Desenvolvimento: Inteligência Artificial (ChatGPT / Claude / Gemini)
+---
 
-🤖 Uso de Inteligência Artificial no Projeto
-A IA foi utilizada como uma ferramenta de apoio e produtividade durante as seguintes etapas do desenvolvimento:
+## 📌 Sobre o Projeto
 
-Estruturação da Arquitetura e Rotas: Apoio na modelagem inicial das rotas do Flask no app.py e boas práticas de integração com o banco de dados database.py.
+O **Sistema de Gestão para Ótica** é uma solução web desenvolvida para otimizar o gerenciamento e controle de catálogo de produtos (óculos, lentes monofocais, bifocais, multifocais e acessórios), movimentação de estoque e visualização de dados operacionais.
 
-Resolução de Problemas (Troubleshooting): Diagnóstico de erros de CORS (Cross-Origin Resource Sharing) e suporte na configuração da biblioteca flask-cors.
+---
 
-Documentação: Auxílio na geração e organização do arquivo README.md para apresentar o projeto de forma clara e padronizada.
+## 🛠️ Tecnologias Utilizadas
 
-📐 Decisões Tomadas e Justificativas
-Uso do Bootstrap no Frontend: Optei por utilizar o framework Bootstrap na interface para garantir uma estilização limpa, moderna e consistente sem perder tempo reimplementando componentes do zero. Além disso, o grid do Bootstrap proporcionou responsividade total à página, garantindo boa navegação em diferentes tamanhos de tela.
+| Camada | Tecnologias |
+| :--- | :--- |
+| **Backend** | Python 3.10+, Flask, Flask-CORS |
+| **Frontend** | HTML5, CSS3, JavaScript (ES6+), Bootstrap 5 |
+| **Banco de Dados** | SQLite3 |
+| **Ferramentas & Versionamento** | Git, `venv` (Virtual Environment) |
+| **Auxílio & Produtividade** | IA (ChatGPT / Claude / Gemini) |
 
-Isolamento das chamadas de API (api.js): Toda a comunicação de rede (requests/fetch) foi centralizada num único arquivo de serviço para manter o código limpo e reutilizável.
+---
 
-Separação de Módulos Backend: Separação entre a regra de rotas (app.py) e a camada de perssitência do banco de dados (database.py).
+## 🤖 Uso de Inteligência Artificial
 
-📁 Estrutura do Projeto
-Plaintext
+> 💡 **Nota de Transparência:** A IA foi utilizada como uma ferramenta de apoio e produtividade durante as seguintes etapas do projeto:
+
+- 🏗️ **Arquitetura & Rotas:** Auxílio na modelagem inicial das rotas RESTful no `app.py` e boas práticas de integração com o módulo `database.py`.
+- 🛠️ **Troubleshooting:** Suporte no diagnóstico e resolução de erros de política de CORS (*Cross-Origin Resource Sharing*) usando `flask-cors`.
+- 📝 **Documentação:** Apoio na estruturação, clareza e formatação padrão deste arquivo `README.md`.
+
+---
+
+## 📐 Decisões Tomadas e Justificativas
+
+- 🎨 **Interface Responsiva com Bootstrap:** Optei pelo **Bootstrap 5** para garantir uma interface moderna, padronizada e limpa sem gastar tempo excessivo reimplementando componentes do zero. O sistema de grid garante total **responsividade** para desktops e dispositivos móveis.
+- 🔌 **Centralização de Requisições (`api.js`):** Toda a camada de comunicação com o backend (HTTP Fetch Requests) foi isolada num único módulo JS para manter o código limpo, modular e fácil de dar manutenção.
+- 🗄️ **Separação em Módulos Backend:** Separação estrita de responsabilidades entre a lógica de rotas/Endpoints (`app.py`) e a camada de persistência de dados (`database.py`).
+
+---
+
+## 📁 Estrutura do Projeto
+
+```text
 otica/
-├── Backend/
-│   ├── app.py              # Ponto de entrada da aplicação e definição das rotas Flask
-│   ├── database.py         # Configuração e conexão com o banco de dados
-│   ├── otica.db            # Banco de dados SQLite
-│   └── venv/               # Ambiente virtual Python
-├── .gitignore              # Arquivo de exclusões do Git
-└── README.md               # Documentação do projeto
-
+├── 📂 Backend/
+│   ├── 📄 app.py              # Entrada da aplicação e endpoints Flask
+│   ├── 📄 database.py         # Conexão e manipulação do banco SQLite
+│   ├── 🗄️ otica.db            # Banco de dados SQLite
+│   └── 📂 venv/               # Ambiente virtual Python
+├── 📄 .gitignore              # Regras de exclusão do Git
+└── 📄 README.md               # Documentação completa do projeto
 ⚙️ Como Executar o Projeto
-Clonar o repositório:
-
+1️⃣ Clonar o Repositório
 Bash
 git clone <URL_DO_REPOSITORIO>
 cd otica
-Ativar o ambiente virtual (venv):
-
+2️⃣ Configurar e Ativar o Ambiente Virtual (venv)
 Windows:
 
 Bash
 .\Backend\venv\Scripts\activate
-Linux/macOS:
+Linux / macOS:
 
 Bash
 source Backend/venv/bin/activate
-Instalar as dependências:
-
+3️⃣ Instalar as Dependências
 Bash
 pip install flask flask-cors
-Executar o servidor Backend:
-
+4️⃣ Iniciar o Servidor Backend
 Bash
 python Backend/app.py
-🎯 Desafios e Dificuldades Encontradas
-1. Configuração do Ambiente Virtual e Versionamento
-Dificuldade: Inicialmente, o repositório continha arquivos pesados das dependências instaladas no ambiente virtual (venv), além de arquivos temporários do Python (__pycache__), deixando o repositório poluído.
+🚀 O servidor estará rodando em: http://localhost:5000
 
-Solução: Criação de um arquivo .gitignore configurado adequadamente para ignorar pastas como venv/, __pycache__/, arquivos binários .sqlite3/.db e variáveis de ambiente .env.
+🎯 Desafios e Soluções Técnico-Práticas
+🔴 Dificuldade: O repositório continha arquivos pesados do ambiente virtual (venv/) e temporários (__pycache__/), poluindo os commits.
 
-2. Integração e Comunicação das Rotas Flask com o Banco de Dados
-Dificuldade: Tratar a conexão com o banco de dados SQLite dentro do fluxo das rotas da API, garantindo que as requisições do painel de produtos retornem os dados em formato JSON correto sem travar conexões ativas.
+🟢 Solução: Criação de um .gitignore robusto ignorando venv/, __pycache__/, binários .sqlite3/.db e variáveis de ambiente.
 
-Solução: Separação clara da lógica de banco de dados no módulo database.py e estruturação de rotas organizadas no app.py, garantindo o encerramento correto das conexões após cada requisição.
+🔴 Dificuldade: Gerenciar o ciclo de vida das conexões sem travar o banco ou gerar concorrência em requisições concorrentes.
 
-3. Integração Cross-Origin (CORS)
-Dificuldade: Bloqueio de requisições ao tentar conectar o painel frontend ao servidor Flask.
+🟢 Solução: Encapsulamento do banco no database.py, garantindo encerramento correto do cursor após cada requisição das rotas do app.py.
 
-Solução: Configuração e suporte a requisições Cross-Origin usando a biblioteca flask-cors.
+🔴 Dificuldade: Bloqueio de requisições ao tentar consumir o backend Flask a partir da interface frontend.
+
+🟢 Solução: Implementação e parametrização do middleware flask-cors nas rotas do projeto.
 
 🔮 O que Ficou Faltando / Próximos Passos (Com Mais Tempo)
-Com mais tempo disponível para o desenvolvimento do projeto, as seguintes melhorias seriam implementadas:
+🔐 Tela de Login do Colaborador: Implementação de um fluxo de autenticação (login/logout) com controle de acesso baseado em níveis de usuário (vendedor vs administrador).
 
-Tela de Login do Colaborador: Implementar um fluxo de autenticação e autorização (login/logout) com verificação de credenciais e controle de acesso baseado em níveis de usuário (ex.: vendedor e administrador).
+🛡️ Autenticação JWT: Proteção das rotas privadas da API com tokens de acesso (JSON Web Tokens).
 
-Gestão de Sessões e JWT: Adicionar tokens de autenticação para proteger as rotas da API restritas aos funcionários.
+🔍 Filtros Avançados: Busca combinada por categoria, faixa de preço e marca diretamente no painel.
 
-Filtros e Busca Avançada: Adicionar campo de busca por nome de produto, categoria ou faixa de preço no painel.
+💬 Respostas da Parte 4 — Perguntas Curtas
+1. Qual a diferença entre npm run dev e npm run build? Qual deve ir para produção e por quê?
+O npm run dev inicia um servidor de desenvolvimento local com compilação em tempo real e source maps, ideal para depuração mas pesado e lento. O npm run build compila, minifica e otimiza todo o código em arquivos estáticos (HTML/CSS/JS) leves. Para produção deve ir o resultado do build, pois oferece alta performance, menor consumo de banda e maior segurança quando servido por um web server (ex.: Nginx) ou CDN.
 
-💬 Respostas da Parte 4 - Perguntas Curtas
-1. Diferença entre npm run dev e npm run build (Ambiente de Produção)
-O npm run dev sobe um servidor de desenvolvimento local que compila o código em tempo real (com Hot Module Replacement) e inclui arquivos de source maps, sendo mais pesado e lento. Já o npm run build gera arquivos estáticos (HTML, CSS e JS) totalmente minificados e otimizados para alto desempenho. Para produção, deve-se utilizar a versão do build, servida por um web server (como Nginx) ou CDN, garantindo maior velocidade e segurança.
-2. Por que não se deve usar o servidor embutido do Flask (flask run) em produção? o que você usaria no lugar?
-O servidor interno do Flask é WSGI simples, mono-thread/single-process por padrão, feito apenas para desenvolvimento e não suporta concorrência nem grandes volumes de requisições. Em ambiente de produção, utiliza-se um servidor WSGI robusto como o Gunicorn ou uWSGI, operando atrás de um proxy reverso como o Nginx.
-3. Um gerente de loja diz: "a tela de produtos ficou em branco". Quais passos você
-seguiria para descobrir a causa?
-Inspecionar o navegador: Abrir o DevTools (F12) e checar o Console em busca de erros de JavaScript (ex.: sintaxe ou variável undefined).
+2. Por que não se deve usar o servidor embutido do Flask (flask run) em produção? O que você usaria no lugar?
+O servidor nativo do Flask é um servidor WSGI simples, mono-thread por padrão, feito exclusivamente para testes locais e sem suporte a alta concorrência. Em produção, deve-se utilizar um servidor WSGI robusto como o Gunicorn ou uWSGI, operando atrás de um proxy reverso como o Nginx.
 
-Analisar a aba Network: Verificar se as chamadas para a API estão retornando erro (ex.: 404, 500) ou falha de CORS.
+3. Um gerente de loja diz: "A tela de produtos ficou em branco". Quais passos você seguiria para descobrir a causa?
+Inspecionar o Navegador: Abrir as ferramentas de desenvolvedor (F12) e checar o Console para buscar exceções JS.
 
-Testar a API diretamente: Fazer uma requisição via cURL/Postman para checar se o backend está no ar.
+Aba Network: Verificar se as requisições para a API falharam (erros 404, 500 ou CORS).
 
-Verificar Logs: Checar os logs do servidor backend e do web server/CDN para identificar falhas internas.
-4. Por que guardar valores em dinheiro como (float) evitaria isso no Python e no JavaScript?
-O tipo float utiliza representação binária de ponto flutuante (padrão IEEE 754), o que causa imprecisões em dízimas e arredondamentos (ex.: 0.1 + 0.2 resulta em 0.30000000000000004).
+Teste Direto na API: Fazer requisições via cURL/Postman para validar o estado do backend.
 
-Em Python: Deve-se usar o módulo nativo decimal.Decimal ou armazenar os valores inteiros em centavos.
+Análise de Logs: Checar os logs do servidor backend e do proxy/web server.
 
-Em JavaScript: Deve-se trabalhar com o valor em centavos (inteiros) e dividir por 100 apenas na exibição, ou utilizar bibliotecas de precisão como dinero.js / big.js.
+4. Por que guardar valores em dinheiro como float pode dar problema? Como evitar no Python e JS?
+O tipo float utiliza a representação binária IEEE 754, que gera imprecisões de arredondamento em dízimas decimais (ex.: 0.1 + 0.2 vira 0.30000000000000004).
+
+Em Python: Utiliza-se a classe nativa decimal.Decimal ou armazena-se o valor inteiro em centavos.
+
+Em JavaScript: Trabalha-se com inteiros (centavos) dividindo por 100 na exibição, ou utilizam-se bibliotecas de precisão como dinero.js ou big.js.
