@@ -126,5 +126,4 @@ def buscar_pedido(id):
 
 ---
 
-Se estiveres a usar o **VS Code**, podes pressionar `Ctrl + K` e depois `V` (ou `Cmd + K` e depois `V` no Mac) para ver o **Preview** de como o arquivo renderiza com o estilo final!
 
